@@ -5,13 +5,7 @@ import './globals.css';
 import AppLayout from '@/components/layout/AppLayout';
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = GeistSans({
-  variable: '--font-geist-sans',
-});
-
-const geistMono = GeistMono({
-  variable: '--font-geist-mono',
-});
+// Removed incorrect function calls for GeistSans and GeistMono
 
 export const metadata: Metadata = {
   title: 'Infrafolio - DevOps Portfolio & Dashboard',
@@ -24,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`dark ${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-mono antialiased"> {/* Defaulting to mono as per existing setup */}
         <AppLayout>{children}</AppLayout>
         <Toaster />
